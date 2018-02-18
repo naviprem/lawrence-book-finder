@@ -1,0 +1,55 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "lawrence book finder",
+      "intents": [
+        {
+          "name": "SearchBookIntent",
+          "slots": [
+            {
+              "name": "Book",
+              "type": "AMAZON.Book"
+            }
+          ],
+          "samples": [
+            "I am looking for the book {Book}",
+            "Is {Book} available",
+            "I am looking for {Book}"
+          ]
+        },
+        {
+          "name": "ConfirmBookIntent",
+          "slots": [
+            {
+              "name": "Confirmation",
+              "type": "CONFIRM_LIST"
+            }
+          ],
+          "samples": [
+            "{Confirmation}"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Yes"
+              }
+            },
+            {
+              "name": {
+                "value": "No"
+              }
+            }
+          ],
+          "name": "CONFIRM_LIST"
+        }
+      ]
+    }
+  }
+}
