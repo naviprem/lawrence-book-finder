@@ -1,0 +1,15 @@
+{
+  "name": "lawrence-book-finder",
+  "version": "1.0.0",
+  "description": "lawrence-book-finder",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "fs": "0.0.1-security",
+    "request": "^2.83.0",
+    "voice-insights-sdk": "^1.2.2"
+  }
+}

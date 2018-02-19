@@ -1,54 +1,148 @@
+
+
 {
   "interactionModel": {
     "languageModel": {
       "invocationName": "lawrence book finder",
       "intents": [
         {
-          "name": "SearchBookIntent",
-          "slots": [
-            {
-              "name": "Book",
-              "type": "AMAZON.Book"
-            }
-          ],
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
           "samples": [
-            "I am looking for the book {Book}",
-            "Is {Book} available",
-            "I am looking for {Book}"
+            "how do I search"
           ]
         },
         {
-          "name": "ConfirmBookIntent",
-          "slots": [
-            {
-              "name": "Confirmation",
-              "type": "CONFIRM_LIST"
-            }
-          ],
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
           "samples": [
-            "{Confirmation}"
+            "startover",
+            "new search",
+            "search again"
           ]
         },
         {
-          "name": "AMAZON.HelpIntent"
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "SearchByKeywordIntent",
+          "samples": [
+            "{searchPhrase} {keyword}",
+            "{searchPhrase} {keyword} today",
+            "{searchPhrase} {keyword} available"
+          ],
+          "slots": [
+            {
+              "name": "keyword",
+              "type": "AMAZON.Book",
+              "samples": []
+            },
+            {
+              "name": "searchPhrase",
+              "type": "SEARCH_PHRASE",
+              "samples": []
+            }
+          ]
         }
       ],
       "types": [
         {
+          "name": "SEARCH_PHRASE",
           "values": [
             {
               "name": {
-                "value": "Yes"
+                "value": "I want to read"
               }
             },
             {
               "name": {
-                "value": "No"
+                "value": "I want to read about"
+              }
+            },
+            {
+              "name": {
+                "value": "I want to read the book"
+              }
+            },
+            {
+              "name": {
+                "value": "I want to read a book by the author"
+              }
+            },
+            {
+              "name": {
+                "value": "tell me if "
+              }
+            },
+            {
+              "name": {
+                "value": "tell me if the book"
+              }
+            },
+            {
+              "name": {
+                "value": "find me about"
+              }
+            },
+            {
+              "name": {
+                "value": "find"
+              }
+            },
+            {
+              "name": {
+                "value": "find me"
+              }
+            },
+            {
+              "name": {
+                "value": "find me the book"
+              }
+            },
+            {
+              "name": {
+                "value": "search"
+              }
+            },
+            {
+              "name": {
+                "value": "search for"
+              }
+            },
+            {
+              "name": {
+                "value": "search for the book"
+              }
+            },
+            {
+              "name": {
+                "value": "Is"
+              }
+            },
+            {
+              "name": {
+                "value": "Is the book"
+              }
+            },
+            {
+              "name": {
+                "value": "give me"
               }
             }
-          ],
-          "name": "CONFIRM_LIST"
+          ]
         }
+
       ]
     }
   }
